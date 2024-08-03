@@ -1,0 +1,11 @@
+img {
+    display: block;
+    width: 200px;
+    /*moves ALL the way to right */
+    margin-left: auto;
+    /*moves ALL the way to left*/
+    margin-right:auto; 
+    /*leas to completely centered!*/
+}
+
+
