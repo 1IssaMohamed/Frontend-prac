@@ -1,0 +1,67 @@
+body {
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+.twin{
+    width: 150px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+.dotted{
+    border: solid burlywood 3px;
+    text-align: center;
+    color: #2b2839;
+}
+@keyframes moveRight {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        background-color: lightblue;
+    }
+    25% {
+        transform: translateX(50px) rotate(45deg);
+        background-color: lightgreen;
+    }
+    50% {
+        transform: translateX(100px) rotate(90deg);
+        background-color: lightcoral;
+    }
+    75% {
+        transform: translateX(50px) rotate(135deg);
+        background-color: lightseagreen;
+    }
+    100% {
+        transform: translateX(0) rotate(180deg);
+        background-color: lightblue;
+    }
+}
+
+.card{
+    padding: 20px;
+    width: 500px;
+    margin: 0px auto;
+    display: flex;
+    justify-content:space-around;
+    border-bottom: 5px solid #030303;
+    background-color: rgba(120, 53, 18, 0.871);
+    border-radius:2%;
+    animation-name: moveRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+    /* box-shadow: h-offset v-offset blur-radius spread-radius red;
+    text-shadow: h-offset v-offset blur-radius red; */
+        /* text-shadow: #030303; */
+}
+.card:hover{
+    padding: 20px;
+    width: 500px;
+    margin: 0px auto;
+    display: flex;
+    justify-content:space-around;
+    border-bottom: 5px solid #030303;
+    background-color: rgba(120, 18, 106, 0.871);
+    border-radius:2%;
+}
