@@ -1,3 +1,48 @@
+/* Complete the CSS styling according to the provided design */
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url(table.jpg);
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font: 50px ;
+    font-style: bold;
+
+}
+
 h1 {
     color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+    
+}
+
+#start{
+    background-color:goldenrod;
+    color:rgb(4, 95, 4);
+    width: 150px;
+    font-size: 15px;
+    border-radius: 2%;
+    font-weight: bold;
+    border: none;
+}
+#card{
+    background-color:goldenrod;
+    color:rgb(4, 95, 4);
+    width: 150px;
+    font-size: 15px;
+    border-radius: 2%;
+    font-weight: bold;
+    border: none;
+}
+.buttons{
+    display: flex;
+    flex-direction:column ;
+    justify-content:space-between;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 100px;
 }

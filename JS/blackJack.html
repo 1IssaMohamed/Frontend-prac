@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="blackJack.css">
+<html>
+    <head>
+        <link rel="stylesheet" href="blackJack.css">
+    </head>
+    <body>
+        <h1>Blackjack</h1>
+        <p id="message-el">Want to play a round?</p>
+        <p id="cards">Cards:</p>
+        <p id="sum">Sum:</p>
+        <div class="buttons">
+        <button id="start" onclick="start()">START GAME</button>
+        <button id="card" onclick="card()">New Card</button>
+        </div>
+        <script src="blackJack.js"></script>
 
-    <title>Document</title>
-</head>
-<body>
-    <h1>Blackjack</h1>
-    <script src="blackJack.js"></script>
-</body>
+    </body>
 </html>
