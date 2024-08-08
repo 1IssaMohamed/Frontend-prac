@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="peopleCounter.css">
+        <title>Counter</title>
+    </head>
+    <body>
+        <div class="container">    
+            <h1>People entered:</h1>
+            <h2 id="count-el">0</h2>
+            <button id="increment-btn" onclick="increment()">increment</button>
+            <button id="save-btn" onclick="save()">Save</button>
+            <!-- interestingly enough, you cant actually set your js at the head because it will try to access ids adn itms that havent been seen yet in the html file
+            so generally should add to the end of your html body -->
+            <p id="save-el">Previous entries:</p>
+            <script src="peopleCounter.js"> </script>
+        </div>
+    </body>
+</html>

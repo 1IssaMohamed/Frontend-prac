@@ -1,0 +1,21 @@
+.red {
+    background: #c71226;
+    height: 100px;
+}
+
+.blue {
+    background: #0d1b88;
+    height: 100px;
+    margin-bottom: 35px;
+    margin-top: 35px;
+
+}
+
+.green {
+    background: #397327;
+    height: 100px;
+}
+
+body{
+    margin:0;
+}

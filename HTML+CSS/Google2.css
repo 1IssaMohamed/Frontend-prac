@@ -1,0 +1,45 @@
+.main {
+    margin-top: 250px;
+    /* text-align: center; */
+}
+.inputText{
+    width: 400px;
+    line-height: 24px;
+    padding-top: 10px;
+    padding-left:30px;
+    padding-right:30px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.image{
+    width: 300px;
+    display: block;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.btn{
+    font-size: 14px;
+    width: 130px;
+    height: 40px;
+    border: none;
+    background: #dfe1e5;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right:8.5px ;
+    margin-left:8.5px ;
+    margin-top: 15px;
+
+    text-align: center;
+}
+/* This is known as the "flexbox" technique, diff way to center adn change format in genral */
+.wrapper{
+    display: flex;
+    justify-content: center;
+}

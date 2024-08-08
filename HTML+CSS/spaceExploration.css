@@ -1,0 +1,45 @@
+
+.orbitron-fonts {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+    color: #3F678C;
+    font: 12px "Orbitron";
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    text-align: center;
+    margin: 0;
+}
+#blur{
+    text-shadow: 1px 1px 9px #4E83A5;
+}
+#main{
+    font: inherit;
+
+    background-image: url("galaxy.gif");
+    background-size: cover;
+    padding: 50px 0px 200px 0;
+}
+.btn{
+    font: inherit;
+    border: none;
+    
+    /* padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 5px; */
+    padding: 6px 12px;
+    color: #3F678C;
+    background: white;
+}
+.underline{
+    /* text-decoration: underline 5px; */
+    border-bottom: 4px solid #3F678C;
+}
+#logo{
+    width: 70px;
+}
