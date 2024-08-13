@@ -1,28 +1,25 @@
-// function save(){
-//     console.log("buttone clicked!")
-
-// const { render } = require("express/lib/response")
-
-// }
+let myLeads=[]
 const inputBtn=document.getElementById("input-btn")
 const delEl=document.getElementById("delete-btn")
-
-// let myLeads=JSON.parse(localStorage.getItem("leads"))
-let myLeads=[]
-// localStorage.setItem("leads",JSON.stringify(myLeads))    
+const tabBtn=document.getElementById("tab-btn")
 const inputEl=document.getElementById("input-el")
 const ulEl=document.getElementById("unordered-list")
+
+
+
 //refresh all the links right when the page opens (if there exist any links that is)
  const localStorageData=JSON.parse(localStorage.getItem("leads"))
 if (localStorageData){
     myLeads=localStorageData
     render(myLeads)
 }
+
 delEl.addEventListener("dblclick",function(){
     localStorage.clear();
     myLeads=[]
     render(myLeads)
 })
+
 inputBtn.addEventListener("click", function() {
     // The reason I dont have to get all the items form storage is because I already did that before I entered this fucntion
     myLeads.push(inputEl.value)
@@ -31,12 +28,28 @@ inputBtn.addEventListener("click", function() {
     // PS: remember JSON.stringify()
     localStorage.setItem("leads",JSON.stringify(myLeads))
     render(myLeads)
-
 })
+
 inputEl.addEventListener("keydown", function(event){
     if(event.key=="Enter"){
         inputBtn.click();
     }
+})
+
+// const tabs = [
+//     {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+// ]
+tabBtn.addEventListener("click",function(){
+        // verbose variant
+        myLeads.push(window.location.href)
+        render(myLeads)
+    // function logTabs(tabs) {
+    //     myLeads.push(tabs[0].url);
+    //     localStorage.setItem("leads",JSON.stringify(myLeads))
+    //     render(myLeads)
+    // }
+    
+    // browser.tabs.query({currentWindow: true, active: true}).then(logTabs, console.error);
 })
 
 function render(leads){
