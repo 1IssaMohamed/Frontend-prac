@@ -40,16 +40,13 @@ inputEl.addEventListener("keydown", function(event){
 //     {url: "https://www.linkedin.com/in/per-harald-borgen/"}
 // ]
 tabBtn.addEventListener("click",function(){
-        // verbose variant
-        myLeads.push(window.location.href)
+    const browserAPI = window.browser || window.chrome;
+    browserAPI.tabs.query({currentWindow: true, active: true}).then((tabs) => {
+        let tab = tabs[0];
+        myLeads.push(tab.url)
+        localStorage.setItem("leads",JSON.stringify(myLeads))
         render(myLeads)
-    // function logTabs(tabs) {
-    //     myLeads.push(tabs[0].url);
-    //     localStorage.setItem("leads",JSON.stringify(myLeads))
-    //     render(myLeads)
-    // }
-    
-    // browser.tabs.query({currentWindow: true, active: true}).then(logTabs, console.error);
+    }, console.error) 
 })
 
 function render(leads){
