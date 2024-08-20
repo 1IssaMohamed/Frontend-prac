@@ -6,7 +6,6 @@ const inputEl=document.getElementById("input-el")
 const ulEl=document.getElementById("unordered-list")
 
 
-
 //refresh all the links right when the page opens (if there exist any links that is)
  const localStorageData=JSON.parse(localStorage.getItem("leads"))
 if (localStorageData){
