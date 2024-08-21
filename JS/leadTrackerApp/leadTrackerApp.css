@@ -1,21 +1,16 @@
 body {
-    margin: 0px;
+    margin: 0 auto;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    min-width: 400px;
+    max-width: 257px;
 }
-
-/*
-
-Style our app according to the provided design!
-
-green color -> #5f9341
-
-*/
-
-
+label{
+    color: #5f9341;
+    font-weight: 900;
+    margin: 20px 0px;
+}
 input {
-    width: 100%;
+    width: 98.5%;
     padding: 10px;
     box-sizing: border-box;
     border:1px solid #5f9341;
@@ -42,7 +37,7 @@ ul{
 }
 li{
     margin-top: 5px;
-    /* padding: 0px; */
+    /* padding: 0px; */ 
     /* margin-right: auto; */
     /* padding: 0%; */
 }
