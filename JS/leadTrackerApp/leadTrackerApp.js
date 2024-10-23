@@ -30,6 +30,7 @@ const delEl=document.getElementById("delete-btn")
 const inputEl=document.getElementById("input-el")
 const ulEl=document.getElementById("unordered-list")
 
+// simple reusable function 
 function render(leads){
     let listItems = ""
     for(let i=0; i< leads.length;i++){
@@ -67,10 +68,11 @@ onValue(refrenceInDB,function(snapshot){
         const snapshotValues=snapshot.val()
         const leads=Object.values(snapshotValues)
         console.log(leads)
+        // calls on the simple function above that will ouput the leads from the db to our unordered list
         render(leads)
     }
 })
-
+// jus ta simple function that will run everyting when we click enter on the input bar instead of clickign the button
 inputEl.addEventListener("keydown", function(event){
     if(event.key=="Enter"){
         inputBtn.click();
