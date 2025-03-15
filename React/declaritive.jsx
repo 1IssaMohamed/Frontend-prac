@@ -18,9 +18,9 @@ appending an h1 to our div#root (without using innerHTML).
 Don't use innerHTML to accomplish any of this.
     
 */
-
-const h1 = document.createElement("h1");
-h1.textContent="Hello world!";
-h1.className="header";
-root=document.getElementById("root");
-root.appendChild(h1);
+// THIS is imperative code 
+// react is declaritive, just create the root and render the element, forget about all the other small deatils of editting each specific element
+const h1 = document.createElement("h1")
+h1.textContent = "Hello, React!"
+h1.className = "header"
+document.getElementById("root").appendChild(h1) 
