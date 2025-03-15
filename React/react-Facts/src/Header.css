@@ -1,0 +1,26 @@
+*{
+    font-family: Inter, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+header{
+    height:90px;
+    background-color:#000000;
+    padding: 30px 25px;
+
+}
+.nav{
+    display:flex;
+    align-items: center;
+    height: 100%;
+}
+nav > img{
+    width:50px;
+    height:50px;
+
+}
+nav > span{
+    color: #61DAFB;
+    font-size: 1.4rem;
+}
