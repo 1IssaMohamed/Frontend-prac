@@ -1,4 +1,3 @@
-import './Header.css'
 import globeimg from '../../assets/Globe.png'
 // Cont with cleaning up the css and gettign the flexing to work
 
