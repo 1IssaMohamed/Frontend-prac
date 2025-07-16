@@ -8,7 +8,6 @@ import Header from './components/Header/Header'
 import Entry from './components/Entry/Entry'
 function App() {
   const [count, setCount] = useState(0)
-image1= japan1 alt="image 1";
   return (
     <>
     <Header/>
