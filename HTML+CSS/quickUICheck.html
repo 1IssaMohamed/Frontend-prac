@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriSci UI Mockups</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .screen {
+            background: white;
+            border: 2px solid #333;
+            border-radius: 8px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .screen-title {
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 6px 6px 0 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .menu-bar {
+            background: #e0e0e0;
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+            margin: -20px -20px 20px -20px;
+        }
+        
+        .button {
+            background: #2196F3;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            margin: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        .button:hover {
+            background: #1976D2;
+        }
+        
+        .form-group {
+            margin: 15px 0;
+        }
+        
+        .form-group label {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+        }
+        
+        .form-group input, .form-group select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        .table th {
+            background: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #4CAF50;
+            margin: 20px 0;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            background: #e0e0e0;
+            border: none;
+            cursor: pointer;
+            margin-right: 2px;
+        }
+        
+        .tab.active {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .chart-placeholder {
+            background: #f9f9f9;
+            border: 2px dashed #ccc;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .two-column {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        .highlight {
+            background: #ffeb3b;
+            padding: 2px 4px;
+        }
+        
+        .comparison-item {
+            background: #f5f5f5;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+        
+        .arrow {
+            font-size: 20px;
+            color: #4CAF50;
+        }
+        
+        .splash-screen {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #4CAF50, #2196F3);
+            color: white;
+        }
+        
+        .splash-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .splash-subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>NutriSci: SwEATch to better! - UI Mockups</h1>
+
+    <!-- Splash Screen -->
+    <div class="screen">
+        <div class="splash-screen">
+            <div class="splash-title">NutriSci</div>
+            <div class="splash-subtitle">SwEATch to better!</div>
+            <div class="form-group">
+                <label for="profile-select">Select Profile:</label>
+                <select id="profile-select">
+                    <option>John Doe</option>
+                    <option>Jane Smith</option>
+                    <option>Create New Profile...</option>
+                </select>
+            </div>
+            <button class="button">Enter Application</button>
+        </div>
+    </div>
+
+    <!-- Main Application Screen -->
+    <div class="screen">
+        <div class="screen-title">Main Application - Dashboard</div>
+        <div class="menu-bar">
+            <span>File | Profile | Settings | Help</span>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active">Dashboard</button>
+            <button class="tab">Log Meal</button>
+            <button class="tab">Food Swaps</button>
+            <button class="tab">Nutrition Analysis</button>
+            <button class="tab">Canada Food Guide</button>
+        </div>
+        
+        <div class="two-column">
+            <div class="column">
+                <h3>Today's Summary</h3>
+                <p><strong>Total Calories:</strong> 1,850 / 2,000</p>
+                <p><strong>Protein:</strong> 85g</p>
+                <p><strong>Carbs:</strong> 220g</p>
+                <p><strong>Fat:</strong> 65g</p>
+                
+                <h3>Recent Meals</h3>
+                <div class="comparison-item">
+                    <strong>Breakfast:</strong> Oatmeal with berries - 350 cal         <button class="button">View Nutrition Details</button>
+                </div>
+                <div class="comparison-item">
+                    <strong>Lunch:</strong> Chicken salad - 450 cal         <button class="button">View Nutrition Details</button>
+                </div>
+                <div class="comparison-item">
+                    <strong>Dinner:</strong> Pasta with vegetables - 650 cal         <button class="button">View Nutrition Details</button>
+                </div>
+            </div>
+            
+            <div class="column">
+                <h3>Daily Nutrition Chart</h3>
+                <div class="chart-placeholder">
+                    [Pie Chart: Protein 20%, Carbs 55%, Fat 25%]
+                </div>
+                
+                <h3>Food Guide Adherence</h3>
+                <div class="chart-placeholder">
+                    [Bar Chart: CFG Compliance]
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Creation/Edit Screen -->
+    <div class="screen">
+        <div class="screen-title">User Profile</div>
+        
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="John Doe">
+        </div>
+        
+        <div class="form-group">
+            <label for="sex">Sex:</label>
+            <select id="sex">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob">
+        </div>
+        
+        <div class="form-group">
+            <label for="height">Height:</label>
+            <input type="number" id="height" placeholder="175">
+            <select style="width: 80px;">
+                <option>cm</option>
+                <option>ft/in</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="weight">Weight:</label>
+            <input type="number" id="weight" placeholder="70">
+            <select style="width: 80px;">
+                <option>kg</option>
+                <option>lbs</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="units">Units:</label>
+            <select id="units">
+                <option>Metric</option>
+                <option>Imperial</option>
+            </select>
+        </div>
+        
+        <button class="button">Save Profile</button>
+        <button class="button">Cancel</button>
+    </div>
+
+    <!-- Meal Logging Screen -->
+    <div class="screen">
+        <div class="screen-title">Log Meal</div>
+        
+        <div class="form-group">
+            <label for="meal-date">Date:</label>
+            <input type="date" id="meal-date">
+        </div>
+        
+        <div class="form-group">
+            <label for="meal-type">Meal Type:</label>
+            <select id="meal-type">
+                <option>Breakfast</option>
+                <option>Lunch</option>
+                <option>Dinner</option>
+                <option>Snack</option>
+            </select>
+        </div>
+        
+        <h3>Food Items</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Food Item</th>
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                    <th>Calories</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Oatmeal</td>
+                    <td>1</td>
+                    <td>cup</td>
+                    <td>150</td>
+                    <td><button class="button">Remove</button></td>
+                </tr>
+                <tr>
+                    <td>Blueberries</td>
+                    <td>0.5</td>
+                    <td>cup</td>
+                    <td>85</td>
+                    <td><button class="button">Remove</button></td>
+                </tr>
+                <tr>
+                    <td>Milk</td>
+                    <td>1</td>
+                    <td>cup</td>
+                    <td>150</td>
+                    <td><button class="button">Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="form-group">
+            <label for="new-food">Add Food:</label>
+            <input type="text" id="new-food" placeholder="Search food items...">
+            <input type="text" id="new-food" placeholder="Quantity...">
+            <button class="button">Add Item</button>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <strong>Total Calories: 385</strong>
+        </div>
+        
+        <button class="button">Save Meal</button>
+        <button class="button">View Nutrition Details</button>
+    </div>
+
+    <!-- Food Swap Goals Screen -->
+    <div class="screen">
+        <div class="screen-title">Food Swap Goals</div>
+        
+        <h3>Select Your Goals (Max 2)</h3>
+        
+        <div class="form-group">
+            <label for="goal1">Goal 1:</label>
+            <select id="goal1">
+                <option>Increase Fiber</option>
+                <option>Reduce Calories</option>
+                <option>Increase Protein</option>
+                <option>Reduce Sodium</option>
+                <option>Increase Vitamins</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="intensity1">Intensity:</label>
+            <select id="intensity1">
+                <option>Slightly more</option>
+                <option>Moderately more</option>
+                <option>Significantly more</option>
+                <option>Specific amount...</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="goal2">Goal 2 (Optional):</label>
+            <select id="goal2">
+                <option>None</option>
+                <option>Increase Fiber</option>
+                <option>Reduce Calories</option>
+                <option>Increase Protein</option>
+                <option>Reduce Sodium</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="meal-select">Select Meal:</label>
+            <select id="meal-select">
+                <option>Today's Breakfast</option>
+                <option>Today's Lunch</option>
+                <option>Today's Dinner</option>
+                <option>Yesterday's Lunch</option>
+            </select>
+        </div>
+        
+        <button class="button">Find Swaps</button>
+        
+        <div style="margin-top: 30px;">
+            <h3>Suggested Swaps</h3>
+            <div class="comparison-item">
+                <strong>Replace:</strong>  White bread <span class="arrow">→</span> <span class="highlight">Whole grain bread</span><br>
+                <small>+3g fiber, -20 calories</small>
+            </div>
+            <div class="comparison-item">
+                <strong>Replace:</strong> Regular milk <span class="arrow">→</span> <span class="highlight">Almond milk</span><br>
+                <small>-50 calories, +vitamin E</small>
+            </div>
+        </div>
+        
+        <button class="button">Apply Swaps</button>
+        <button class="button">Apply Swaps Over Time</button>
+        <button class="button">View Comparison</button>
+    </div>
+
+    <!-- Before/After Comparison Screen -->
+    <div class="screen">
+        <div class="screen-title">Before/After Comparison</div>
+        
+        <div class="two-column">
+            <div class="column">
+                <h3>Original Meal</h3>
+                <div class="comparison-item">
+                    <strong>Oatmeal:</strong> 1 cup<br>
+                    <small>150 cal, 4g protein, 2g fiber</small>
+                </div>
+                <div class="comparison-item">
+                    <strong>White bread:</strong> 2 slices<br>
+                    <small>160 cal, 4g protein, 1g fiber</small>
+                </div>
+                <div class="comparison-item">
+                    <strong>Regular milk:</strong> 1 cup<br>
+                    <small>150 cal, 8g protein, 0g fiber</small>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong>Total: 460 cal, 16g protein, 3g fiber</strong>
+                </div>
+            </div>
+            
+            <div class="column">
+                <h3>Modified Meal</h3>
+                <div class="comparison-item">
+                    <strong>Oatmeal:</strong> 1 cup<br>
+                    <small>150 cal, 4g protein, 2g fiber</small>
+                </div>
+                <div class="comparison-item highlight">
+                    <strong>Whole grain bread:</strong> 2 slices<br>
+                    <small>140 cal, 4g protein, 4g fiber</small>
+                </div>
+                <div class="comparison-item highlight">
+                    <strong>Almond milk:</strong> 1 cup<br>
+                    <small>100 cal, 1g protein, 0g fiber</small>
+                </div>
+                <div style="margin-top: 15px;">
+                    <strong>Total: 390 cal, 9g protein, 6g fiber</strong>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Nutrient Changes</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nutrient</th>
+                    <th>Before</th>
+                    <th>After</th>
+                    <th>Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Calories</td>
+                    <td>460</td>
+                    <td>390</td>
+                    <td style="color: green;">-70 (-15%)</td>
+                </tr>
+                <tr>
+                    <td>Protein</td>
+                    <td>16g</td>
+                    <td>9g</td>
+                    <td style="color: red;">-7g (-44%)</td>
+                </tr>
+                <tr>
+                    <td>Fiber</td>
+                    <td>3g</td>
+                    <td>6g</td>
+                    <td style="color: green;">+3g (+100%)</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="button">Apply Swaps</button>
+        <button class="button">Apply Swaps Over Time</button>
+        <button class="button">Try Different Swaps</button>
+    </div>
+
+    <!-- Nutrition Analysis Screen -->
+    <div class="screen">
+        <div class="screen-title">Nutrition Analysis</div>
+        
+        <div class="form-group">
+            <label for="analysis-period">Time Period:</label>
+            <select id="analysis-period">
+                <option>Last 7 days</option>
+                <option>Last 30 days</option>
+                <option>Last 3 months</option>
+                <option>Custom range...</option>
+            </select>
+        </div>
+        
+        <div class="two-column">
+            <div class="column">
+                <h3>Daily Nutrient Breakdown</h3>
+                <div class="chart-placeholder">
+                    [Pie Chart: Protein 20%, Carbs 50%, Fat 25%, Fiber 3%, Other 2%]
+                </div>
+                
+                <h3>Average Daily Intake</h3>
+                <p><strong>Calories:</strong> 1,850 / 2,000 recommended</p>
+                <p><strong>Protein:</strong> 85g / 75g recommended ✓</p>
+                <p><strong>Fiber:</strong> 18g / 25g recommended ⚠️</p>
+                <p><strong>Sodium:</strong> 2,100mg / 2,300mg recommended ✓</p>
+            </div>
+            
+            <div class="column">
+                <h3>Trends Over Time</h3>
+                <div class="chart-placeholder">
+                    [Line Chart: Calories, Protein, Fiber over time]
+                </div>
+                
+                <h3>Top 10 Nutrients</h3>
+                <div class="chart-placeholder">
+                    [Bar Chart: Showing top nutrients consumed]
+                </div>
+            </div>
+        </div>
+        
+        <button class="button">Export Report</button>
+        <button class="button">Set Nutrition Goals</button>
+    </div>
+
+    <!-- Canada Food Guide Screen -->
+    <div class="screen">
+        <div class="screen-title">Canada Food Guide Adherence</div>
+        
+        <div class="form-group">
+            <label for="cfg-version">Guide Version:</label>
+            <select id="cfg-version">
+                <option>2019 Guide</option>
+                <option>2007 Guide</option>
+            </select>
+        </div>
+        
+        <div class="two-column">
+            <div class="column">
+                <h3>Your Average Plate</h3>
+                <div class="chart-placeholder">
+                    [Pie Chart: Vegetables 35%, Grains 30%, Protein 25%, Dairy 10%]
+                </div>
+                
+                <h3>Food Group Breakdown</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Food Group</th>
+                            <th>Your %</th>
+                            <th>CFG Recommended</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vegetables & Fruits</td>
+                            <td>35%</td>
+                            <td>50%</td>
+                        </tr>
+                        <tr>
+                            <td>Whole Grains</td>
+                            <td>30%</td>
+                            <td>25%</td>
+                        </tr>
+                        <tr>
+                            <td>Protein Foods</td>
+                            <td>25%</td>
+                            <td>25%</td>
+                        </tr>
+                        <tr>
+                            <td>Dairy</td>
+                            <td>10%</td>
+                            <td>Include daily</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="column">
+                <h3>CFG Recommended Plate</h3>
+                <div class="chart-placeholder">
+                    [Pie Chart: Vegetables 50%, Grains 25%, Protein 25%]
+                </div>
+                
+                <h3>Recommendations</h3>
+                <div class="comparison-item">
+                    <strong>⚠️ Increase vegetables and fruits</strong><br>
+                    <small>Add 15% more to reach CFG guidelines</small>
+                </div>
+                <div class="comparison-item">
+                    <strong>✓ Protein intake is good</strong><br>
+                    <small>You're meeting the recommended amount</small>
+                </div>
+                <div class="comparison-item">
+                    <strong>⚠️ Reduce grain portions slightly</strong><br>
+                    <small>Currently 5% above recommendations</small>
+                </div>
+            </div>
+        </div>
+        
+        <button class="button">View Detailed Analysis</button>
+        <button class="button">Get Improvement Suggestions</button>
+    </div>
+
+    <!-- Meal Journal/History Screen -->
+    <div class="screen">
+        <div class="screen-title">Meal Journal</div>
+        
+        <div class="form-group">
+            <label for="journal-date">Date Range:</label>
+            <input type="date" id="journal-start" style="width: 150px;">
+            <span> to </span>
+            <input type="date" id="journal-end" style="width: 150px;">
+            <button class="button">Filter</button>
+        </div>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Meal</th>
+                    <th>Foods</th>
+                    <th>Calories</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-01-15</td>
+                    <td>Breakfast</td>
+                    <td>Oatmeal, Berries, Milk</td>
+                    <td>385</td>
+                    <td>
+                        <button class="button">View</button>
+                        <button class="button">Edit</button>
+                        <button class="button">Suggest Swaps</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2024-01-15</td>
+                    <td>Lunch</td>
+                    <td>Chicken Salad, Bread</td>
+                    <td>450</td>
+                    <td>
+                        <button class="button">View</button>
+                        <button class="button">Edit</button>
+                        <button class="button">Suggest Swaps</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2024-01-15</td>
+                    <td>Dinner</td>
+                    <td>Pasta, Vegetables, Chicken</td>
+                    <td>650</td>
+                    <td>
+                        <button class="button">View</button>
+                        <button class="button">Edit</button>
+                        <button class="button">Suggest Swaps</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 20px;">
+            <strong>Daily Total: 1,485 calories</strong>
+        </div>
+        
+        <button class="button">Add New Meal</button>
+        <button class="button">Analyze Period</button>
+    </div>
+
+</body>
+</html>
