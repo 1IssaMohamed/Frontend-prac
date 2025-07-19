@@ -12,19 +12,21 @@ import './Entry.css';
     // Text:
     // Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.
 type TravelCardPros={
+    id:number;
     viewImage: string;
     location: string;
     mapsLink: string;
     attraction: string;
     date : string;
     bio : string;
+    alt :string;
 };
 
-function Entry({viewImage, location, mapsLink, attraction, bio, date}: TravelCardPros){
+function Entry({id,viewImage, location, mapsLink, attraction, bio, date, alt}: TravelCardPros){
     return(
         <div className='entry'>
             <div className="entry-img-container">
-                <img src={viewImage} alt="Japan 1" className="entry-img" />
+                <img src={viewImage} alt={alt} className="entry-img" />
             </div>
             <div className="Content">
                 <div className='location'>
