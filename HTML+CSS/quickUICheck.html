@@ -51,7 +51,20 @@
         .button:hover {
             background: #1976D2;
         }
+                .button.primary {
+            background: #4CAF50;
+        }
         
+        .button.primary:hover {
+            background: #45a049;
+        }
+        .swap-summary {
+            background: #e8f5e8;
+            border: 1px solid #4CAF50;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px 0;
+        }
         .form-group {
             margin: 15px 0;
         }
@@ -113,7 +126,7 @@
             align-items: center;
             justify-content: center;
             color: #666;
-            font-style: italic;
+            font-schartyle: italic;
         }
         
         .two-column {
@@ -136,7 +149,56 @@
             margin: 5px 0;
             border-radius: 4px;
         }
+        .results-section {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+                .meal-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
         
+        .meal-info {
+            flex: 1;
+        }
+        
+        .meal-change {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .summary-stats {
+            display: flex;
+            justify-content: space-around;
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2196F3;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+        }
         .arrow {
             font-size: 20px;
             color: #4CAF50;
@@ -173,10 +235,10 @@
                 <select id="profile-select">
                     <option>John Doe</option>
                     <option>Jane Smith</option>
-                    <option>Create New Profile...</option>
                 </select>
             </div>
             <button class="button">Enter Application</button>
+            <button class="button">Create New Profile...</button>
         </div>
     </div>
 
@@ -547,13 +609,6 @@
     <div class="screen">
         <div class="screen-title">Canada Food Guide Adherence</div>
         
-        <div class="form-group">
-            <label for="cfg-version">Guide Version:</label>
-            <select id="cfg-version">
-                <option>2019 Guide</option>
-                <option>2007 Guide</option>
-            </select>
-        </div>
         
         <div class="two-column">
             <div class="column">
@@ -618,10 +673,94 @@
             </div>
         </div>
         
-        <button class="button">View Detailed Analysis</button>
-        <button class="button">Get Improvement Suggestions</button>
+        <button class="button">Dashboard</button>
     </div>
+   </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="screen-title">Apply Food Swaps Over Time</div>
+        
+        <!-- Current Swap Summary -->
+        <div class="swap-summary">
+            <h3>Selected Swap</h3>
+            <p><strong>Replace:</strong> White bread → Whole grain bread</p>
+            <p><strong>Impact per serving:</strong> +3g fiber, -20 calories</p>
+        </div>
 
+        
+        <!-- Date Range (shown when "Specific date range" is selected) -->
+        <div class="form-group">
+            <label>Date Range:</label>
+            <div class="date-range">
+                <input type="date" value="2024-01-01">
+                <span>to</span>
+                <input type="date" value="2024-01-31">
+            </div>
+        </div>
+        
+        <!-- Apply Button -->
+        
+        <!-- Results Section -->
+        <div class="results-section">
+            <h3>Affected Meals (12 meals found)</h3>
+        
+        </div>
+        
+        <!-- Cumulative Effect Summary -->
+        <div class="summary-stats">
+            <div class="stat-item">
+                <div class="stat-value">+36g</div>
+                <div class="stat-label">Total Fiber Added</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">-240</div>
+                <div class="stat-label">Total Calories Reduced</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">+3g</div>
+                <div class="stat-label">Average Daily Fiber</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">-20</div>
+                <div class="stat-label">Average Daily Calories</div>
+            </div>
+        </div>
+            <label for="analysis-period">Charting type:</label>
+            <select id="analysis-period">
+                <option>Bar chart</option>
+                <option>Pie chart</option>
+                <option>Line chart</option>
+            </select>
+                <div class="two-column">
+            <div class="column">
+                <h3>Before</h3>
+                <div class="chart-placeholder">
+                    [Pie Chart: Vegetables 35%, Grains 30%, Protein 25%, Dairy 10%]
+                </div>
+                
+                
+            </div>
+            
+            <div class="column">
+                <h3>After:</h3>
+                <div class="chart-placeholder">
+                    [Pie Chart: Vegetables 50%, Grains 25%, Protein 25%]
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <!-- Action Buttons -->
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="button primary">Confirm Apply Swaps</button>
+            <button class="button">Cancel</button>
+
+        </div>
+    </div>
+</body>
+</html>
     <!-- Meal Journal/History Screen -->
     <div class="screen">
         <div class="screen-title">Meal Journal</div>

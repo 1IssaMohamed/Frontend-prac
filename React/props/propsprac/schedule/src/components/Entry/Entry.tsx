@@ -12,31 +12,34 @@ import './Entry.css';
     // Text:
     // Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.
 type TravelCardPros={
-    id:number;
-    viewImage: string;
-    location: string;
-    mapsLink: string;
-    attraction: string;
-    date : string;
-    bio : string;
-    alt :string;
+      entry:{
+  id: number;
+  img: {
+    src: string;
+    alt: string;
+  };
+  country: string;
+  title: string;
+  googleMapsLink: string;
+  dates: string;
+  text: string;}
 };
 
-function Entry({id,viewImage, location, mapsLink, attraction, bio, date, alt}: TravelCardPros){
+function Entry({entry}: TravelCardPros){
     return(
         <div className='entry'>
             <div className="entry-img-container">
-                <img src={viewImage} alt={alt} className="entry-img" />
+                <img src={entry.img.src} alt={entry.img.alt} className="entry-img" />
             </div>
             <div className="Content">
                 <div className='location'>
                     <img src={Path} alt="Path" className="path-img" />
-                    {'\u00A0'}{'\u00A0'}<p>     {location}</p>{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
-                    <a href={mapsLink}>Google maps</a>
+                    {'\u00A0'}{'\u00A0'}<p>     {entry.country}</p>{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
+                    <a href={entry.googleMapsLink}>Google maps</a>
                 </div>
-                <h1>{attraction}</h1>
-                <h3>{date}</h3>
-                <p>{bio}</p>
+                <h1>{entry.title}</h1>
+                <h3>{entry.dates}</h3>
+                <p>{entry.text}</p>
             </div>
         </div>
     )
