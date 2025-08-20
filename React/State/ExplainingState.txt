@@ -1,0 +1,23 @@
+Essentially react renders fucntions based on what their return values after
+this rendering happens in 2 places
+1. when a new prop is recieved
+2. there is an internval state value onChange
+This internal state value change hapepns thorugh a specific state changign function called setState
+
+This means that you wont see any changes when normal local variables change 
+ex:
+export default function App() {
+    let state = "Yes"
+    
+    function handleClick() {
+        state = "Heck yes"
+    }
+    
+    return (
+        <main>
+            <h1 className="title">Is state important to know?</h1>
+            <button onClick={handleClick} className="value">{state}</button>
+        </main>
+    )
+}
+You will see that when you end up clicking the button, the text acutally change

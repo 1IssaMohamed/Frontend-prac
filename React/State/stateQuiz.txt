@@ -1,0 +1,18 @@
+1. You have 2 options for what you can pass in to a
+   state setter function (e.g. `setCount`). What are they?
+   
+value or function
+so either
+setCount(5)
+or
+setCount(newValue=>newValue+5)
+
+2. When would you want to pass the first option (from answer
+   above) to the state setter function?
+
+when you us twant to set a new value 1 time
+
+3. When would you want to pass the second option (from answer
+   above) to the state setter function?
+
+when you would to change multipel times during a call 
