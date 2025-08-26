@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {state} from 'react'
+
 const Main = () => {
-const ingredients=["apple","banana","orange","grape","kiwi","mango","peach","pear","pineapple","strawberry"];
-const ingrerdientList=ingredients.map((item) => (
+  // currenlty theres an array of itmes that maps the thigns in my list
+  // what I want to do is make that array a use state one so that when I end up chanign the array the whole page refreshes!
+  const [ingredients,setIngredients]= useState(["apple"])
+
+  const ingrerdientList=ingredients.map((item) => (
           <li >{item}</li>
         ))
 
@@ -9,10 +14,7 @@ const ingrerdientList=ingredients.map((item) => (
     event.preventDefault(); // Prevent page refresh
     const formData = new FormData(event.target); // Get form data
     const newIng=formData.get("ingredient");
-    ingredients.push(newIng);
-
-    console.log({newIng},{ingredients});
-    
+    setIngredients(prevIngredients => [...prevIngredients, newIng]);
   }
 
 return (
