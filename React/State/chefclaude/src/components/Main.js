@@ -1,25 +1,23 @@
-import React, { useState } from 'react'
-import {state} from 'react'
+import React from 'react'
+import {useState} from 'react';
 
 const Main = () => {
   // currenlty theres an array of itmes that maps the thigns in my list
   // what I want to do is make that array a use state one so that when I end up chanign the array the whole page refreshes!
-  const [ingredients,setIngredients]= useState(["apple"])
+  const [ingredients,setIngredients]= useState([])
 
   const ingrerdientList=ingredients.map((item) => (
           <li >{item}</li>
         ))
 
-  function printer(event) {
-    event.preventDefault(); // Prevent page refresh
-    const formData = new FormData(event.target); // Get form data
+  function printer(formData) {
     const newIng=formData.get("ingredient");
     setIngredients(prevIngredients => [...prevIngredients, newIng]);
   }
 
 return (
     <main>
-      <form class ="add-ingredient-form" onSubmit={printer}>
+      <form class ="add-ingredient-form" action={printer}>
         <input  
           type="text" 
           placeholder="Type your message..."  
