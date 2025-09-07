@@ -1,9 +1,23 @@
 import React from "react"
 import avatar from "./images/user.png"
-import starFilled from "./images/star-filled.png"
-import starEmpty from "./images/star-empty.png"
+import Star from "./componenets/Star"
+// import starFilled from "./images/star-filled.png"
+// import starEmpty from "./images/star-empty.png"
 
 export default function App() {
+
+       /**
+     * Challenge: Move the star image into its own component (Star)
+     * - It should receive a prop called `isFilled` that it
+     *   uses to determine which icon it will display. (You'll
+     *   need to import the 2 star icons into that new component first).
+     * - Import and render that component, passing the value of
+     *   `isFavorite` to the new `isFilled` prop.
+     * - Don't worry about the abiliity to flip this value quite yet.
+     *   Instead, you can test if it's working by manually changing
+     *   `isFavorite` in state above.
+     */
+
     const [contact, setContact] = React.useState({
         firstName: "John",
         lastName: "Doe",
@@ -11,8 +25,8 @@ export default function App() {
         email: "itsmyrealname@example.com",
         isFavorite: false
     })
-    let star=contact.isFavorite?starFilled:starEmpty
-    let typeStar=contact.isFavorite?"filled star icon":"empty star icon"
+    // let star=contact.isFavorite?starFilled:starEmpty
+    // let typeStar=contact.isFavorite?"filled star icon":"empty star icon"
     function toggleFavorite(event) {
       event.preventDefault()
     //   ok so essentially wwhats happening here is that youre doing setContact ( function (prevContact){
@@ -39,18 +53,8 @@ export default function App() {
                     alt="User profile picture of John Doe"
                 />
                 <div className="info">
-                    <button
-                        onClick={toggleFavorite}
-                        aria-label={contact.isFavorite ? "Remove from favorites" : "Add to favorites"}
-                        aria-pressed={contact.isFavorite}
-                        className="favorite-button"
-                    >
-                        <img
-                            src={star}
-                            alt={typeStar}
-                            className="favorite"
-                        />
-                    </button>
+                        {/* print the star */}
+                        <Star contact={contact} toggleFavourite={toggleFavorite}/>
                     <h2 className="name">
                         {contact.firstName} {contact.lastName}
                     </h2>
