@@ -1,0 +1,7 @@
+so express i a ndoe frame work that is used to build web servers adn apis
+its a layer aroudn nodes built in http tha tmakes the routes and request handing much easier
+so if node is a screw then expres is the hammer that pushes that screw in 
+
+When youre workgin with API keys you dont want them out there publically cause there are bots that look for these keys specifically!
+This coudl lead to them running a bill on yoru ass if youre doign some AI calling or usign a cloud service
+or it could just lead to you losing PII
