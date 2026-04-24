@@ -34,13 +34,16 @@ export default function App() {
     // })
     // in depth what is happening is that we are obv creating the prev contanct object as a parameter that were callign to the setContact function
     // Then we are usign ( ) to ensure taht java understands the { } as an object and not an expression/funciton. Usually () is just used for paramters or grouping things tho 
-    // anothe alternative here would be to expand everythign and NOT use an arrow function which forces me to retun 1 line/object which woul dinturn allow me to do sum like let temp = {...prevContact, !isFav} or wtv
+    // anothe alternative here would be to expand everythign and NOT use an arrow function which forces me to retun 1 line/object which woul dinturn allow me to do sum like 
+    // let temp = {...prevContact, !isFav} or wtv
     // then we spread the ...preContact like so which essenitally seperates it into all of its key:item pairs, and we add th enew isFavorite value to the pairs
     // BUT in js each key can only appear once, so what ends up happing is the new isFavorite overrides the old isFavorite
-        setContact(prevContact => ({
+        setContact(prevContact => 
+            ({
             ...prevContact,
             isFavorite: !prevContact.isFavorite
-        }));
+        })
+    );
 
     }
 

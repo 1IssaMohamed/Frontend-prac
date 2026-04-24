@@ -1,16 +1,17 @@
 import React from 'react'
 import starFilled from "../images/star-filled.png"
 import starEmpty from "../images/star-empty.png"
+// the props that are begin sent are
 
-function Star(props) {
-
-    let isFilled = props.contact.isFavorite
+function Star({contact, toggleFavourite}) {
+    // bool variable
+    let isFilled = contact.isFavorite
     let star = isFilled ? starFilled : starEmpty
     let typeStar = isFilled ? "filled star icon" : "empty star icon"
     return (
         <>
             <button
-                onClick={props.toggleFavourite}
+                onClick={toggleFavourite}
                 aria-label={isFilled? "Remove from favorites" : "Add to favorites"}
                 aria-pressed={isFilled}
                 className="favorite-button"

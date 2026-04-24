@@ -11,4 +11,4 @@ const list=ReactDOM.createRoot(document.getElementById("list"))
 list.render(        <ul>
     <li>hi</li>
     <li>hii</li>
-</ul>,document.getElementById("list"))
+</ul> )

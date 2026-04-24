@@ -30,24 +30,15 @@
 //     )
 // }
 // or
-function Joke(props){
-    return(
-    <>
-        <h1>Setup: {props.setup}</h1>
-        <h1>Punchline: {props.punchline}</h1>
-
-        <h1>Setup: {props.setup}</h1>
-        <h1>Punchline: {props.punchline}</h1>
-        
-        <h1>Setup: {props.setup}</h1>
-        <h1>Punchline: {props.punchline}</h1>
-
-        <h1>Setup: {props.setup}</h1>
-        <h1>Punchline: {props.punchline}</h1>
-
-        <h1>Setup: {props.setup}</h1>
-        <h1>Punchline: {props.punchline}</h1>
-    </>
+// doing {joke} means youre destructring the array or " " (idk what the terminology is) but this is essenitally taking in the prop which is an object 
+// and then youre breaking it down into its the vairables in the object
+// this isnt really necessary, but just makes it easier to understand 
+function Joke({ joke }) {
+    return (
+        <>
+            <h1>Setup: {joke.setup}</h1>
+            <h1>Punchline: {joke.punchline}</h1>
+        </>
     )
 }
 export default Joke

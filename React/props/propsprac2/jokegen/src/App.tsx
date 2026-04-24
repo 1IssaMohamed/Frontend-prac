@@ -21,10 +21,36 @@ import Joke from "./components/Joke"
  * show the punchline?
  */
 
+// put in actual jokes please lol
+
+let jokeList = [
+    { setup: "What do you call a lazy kangaroo?", punchline: "Pouch potato!" },
+    { setup: "Why don't scientists trust atoms?", punchline: "Because they make up everything!" },
+    { setup: "What did the ocean say to the beach?", punchline: "Nothing, it just waved!" },
+    { setup: "Why did the bicycle fall over?", punchline: "Because it was two tired!" }
+]
+
+
+
+
 export default function App() {
+    // want to take in the joke array 
+    // map each and every single 1 seperately into the Joke prop
+
+    // sending in 1 of these jokes 
+    // const only1 = <Joke joke={jokeList[0]} />
+
+    // mapping all the jokes this time 
+    const manyJokes =
+        // take in all the jokes -> push them into Joke component & joke prop 1 by 1 
+        jokeList.map((singleJoke) => <Joke joke={singleJoke} />)
+
+
+
     return (
         <>
-        <Joke setup={123} punchline={["billy","jean"]}/>
+            {/* {only1} */}
+            {manyJokes}
         </>
     )
 }

@@ -4,7 +4,12 @@ export default function App() {
     const [count, setCount] = React.useState(0)
 
     function add() {
-        setCount(prevCount => prevCount + 1)
+        // This could be ineffective if we have multiple calls to add() in a short time, because
+        // this is becuase useState work by updating the state of the react component/system
+        // and this all happens with asynch calls, so this entail that unlike synchronous code, the value of count is not updated IMM after calling setCount
+        // asynch calls only care about the value at the current time
+        // so if you have too many calls happeneing at once, you might overwhelm the sytem and th estate may get updated with an previous valeu multiple times of 2 or more.
+        setCount(count+1)
     }
 
     function subtract() {
